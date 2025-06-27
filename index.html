@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicación de Matemáticas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Aplicación de Matemáticas</h1>
+    </header>
+
+    <main>
+        <section id="actividad1" class="actividad-section">
+            <h2>Actividad 1</h2>
+            <p>Una vez que ya conocemos el orden en el que tienen que resolverse las operaciones combinadas. Pon tu conocimiento a prueba!</p>
+            <p>Instrucciones: Une cada operación con el paso que debe resolverse primero.</p>
+
+            <div class="problema-container">
+                <div class="problema-act1" data-correct-option="Multiplicación">
+                    <span>2 + 3 x 4</span>
+                    <div class="opciones-act1">
+                        <button data-option="Multiplicación">Multiplicación</button>
+                        <button data-option="Suma">Suma</button>
+                    </div>
+                </div>
+
+                <div class="problema-act1" data-correct-option="Paréntesis">
+                    <span>(5 + 6) ÷ 3</span>
+                    <div class="opciones-act1">
+                        <button data-option="Paréntesis">Paréntesis</button>
+                        <button data-option="División">División</button>
+                    </div>
+                </div>
+
+                <div class="problema-act1" data-correct-option="Resta(izq a der)">
+                    <span>10 - 2 + 4</span>
+                    <div class="opciones-act1">
+                        <button data-option="Resta(izq a der)">Resta(izq a der)</button>
+                        <button data-option="Suma">Suma</button>
+                    </div>
+                </div>
+
+                <div class="problema-act1" data-correct-option="Multiplicación dentro del paréntesis">
+                    <span>12 ÷ (2 x 3)</span>
+                    <div class="opciones-act1">
+                        <button data-option="Multiplicación dentro del paréntesis">Multiplicación dentro del paréntesis</button>
+                        <button data-option="División">División</button>
+                    </div>
+                </div>
+            </div>
+            <button class="reiniciar" data-activity="1">Reiniciar</button>
+            <div id="feedback-act1" class="feedback-messages">
+                <div class="correcto" style="display: none;">
+                    <img src="correcto.png" alt="Correcto">
+                    <p>Correcto! Continua así</p>
+                </div>
+                <div class="incorrecto" style="display: none;">
+                    <img src="incorrecto.png" alt="Incorrecto">
+                    <p>Revisa nuevamente la información</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="actividad2" class="actividad-section" style="display: none;">
+            <h2>Actividad 2</h2>
+            <p>Ahora que ya conocemos estos dos temas es hora de ponerlos en práctica!</p>
+            <p>Instrucciones: Arrastra al orden correcto la siguiente operación combinada</p>
+
+            <p class="operacion-combinada">1/2 + 2 × 1/4 +(3 × 5)</p>
+
+            <div id="pasos-originales-act2" class="pasos-draggable">
+                <div draggable="true" id="paso-c" class="draggable-item" data-orden="c">c. Resolver paréntesis: (3 × 5) = 15</div>
+                <div draggable="true" id="paso-a" class="draggable-item" data-orden="a">a. Multiplicar: 2 × 1/4 = 2/4</div>
+                <div draggable="true" id="paso-b" class="draggable-item" data-orden="b">b. Sumar: 1/2 + 2/4 = 4/4 = 1</div>
+            </div>
+
+            <h3>RESPUESTA</h3>
+            <div id="respuesta-droptargets-act2" class="respuesta-droptargets">
+                <div class="drop-target" data-expected-order="c"></div>
+                <div class="drop-target" data-expected-order="a"></div>
+                <div class="drop-target" data-expected-order="b"></div>
+            </div>
+            <button class="reiniciar" data-activity="2">Reiniciar</button>
+            <div id="feedback-act2" class="feedback-messages">
+                <div class="correcto" style="display: none;">
+                    <img src="correcto.png" alt="Correcto">
+                    <p>Correcto! Continua así</p>
+                </div>
+                <div class="incorrecto" style="display: none;">
+                    <img src="incorrecto.png" alt="Incorrecto">
+                    <p>Revisa nuevamente la información</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="actividad3" class="actividad-section" style="display: none;">
+            <h2>Actividad 3</h2>
+            <p>¿Cuánto sabes sobre la ley de signos?</p>
+            <p>Instrucciones: Haz click en el signo correcto dependiendo de cada operación</p>
+
+            <div class="problema-signos-container">
+                <div class="problema-signos" data-correct-sign="-">
+                    <span>(-6) × (+2) = </span>
+                    <button class="signo" data-sign="+">+</button>
+                    <button class="signo" data-sign="-">-</button>
+                </div>
+
+                <div class="problema-signos" data-correct-sign="+">
+                    <span>(+3) - (-2) = </span>
+                    <button class="signo" data-sign="+">+</button>
+                    <button class="signo" data-sign="-">-</button>
+                </div>
+
+                <div class="problema-signos" data-correct-sign="-">
+                    <span>(-5) + (+2) = </span>
+                    <button class="signo" data-sign="+">+</button>
+                    <button class="signo" data-sign="-">-</button>
+                </div>
+
+                <div class="problema-signos" data-correct-sign="-">
+                    <span>(-8) + (-2) = </span>
+                    <button class="signo" data-sign="+">+</button>
+                    <button class="signo" data-sign="-">-</button>
+                </div>
+            </div>
+            <button class="reiniciar" data-activity="3">Reiniciar</button>
+            <div id="feedback-act3" class="feedback-messages">
+                <div class="correcto" style="display: none;">
+                    <img src="correcto.png" alt="Correcto">
+                    <p>Correcto! Continua así</p>
+                </div>
+                <div class="incorrecto" style="display: none;">
+                    <img src="incorrecto.png" alt="Incorrecto">
+                    <p>Revisa nuevamente la información</p>
+                </div>
+            </div>
+        </section>
+
+        <nav>
+            <button onclick="mostrarActividad(1)">Actividad 1</button>
+            <button onclick="mostrarActividad(2)">Actividad 2</button>
+            <button onclick="mostrarActividad(3)">Actividad 3</button>
+        </nav>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,266 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f7f3ed; /* Un color crema claro como en los anexos */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+h1 {
+    color: #4a2c00; /* Un tono café oscuro */
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #6b3e00; /* Otro tono café */
+    font-size: 2em;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+main {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+}
+
+.actividad-section {
+    margin-bottom: 40px;
+    padding: 20px;
+    border: 1px solid #e0d9cd; /* Borde sutil */
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+/* Actividad 1 */
+.problema-act1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 15px;
+    background-color: #f9f6f2; /* Fondo ligeramente diferente para problemas */
+    border-radius: 6px;
+    border: 1px solid #eee;
+    font-size: 1.1em;
+}
+
+.opciones-act1 button {
+    background-color: #a46d00; /* Botones de acción */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.95em;
+    transition: background-color 0.3s ease;
+    margin-left: 10px;
+}
+
+.opciones-act1 button:hover {
+    background-color: #8a5a00;
+}
+
+.opciones-act1 button.selected {
+    background-color: #d19a4a; /* Color cuando está seleccionada */
+}
+
+/* Actividad 2 */
+.operacion-combinada {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 20px 0;
+    color: #4a2c00;
+}
+
+.pasos-draggable {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.draggable-item {
+    background-color: #d8c29e; /* Fondo para elementos arrastrables */
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: grab;
+    width: 80%;
+    max-width: 350px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    transition: background-color 0.2s ease;
+}
+
+.draggable-item:hover {
+    background-color: #cbb48f;
+}
+
+.draggable-item.dragging {
+    opacity: 0.7;
+    border: 2px dashed #a46d00;
+}
+
+.respuesta-droptargets {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    min-height: 150px; /* Para que se vea el área de drop */
+}
+
+.drop-target {
+    border: 2px dashed #a46d00; /* Borde punteado para el área de drop */
+    background-color: #f0ebe4;
+    min-height: 40px;
+    width: 80%;
+    max-width: 350px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #888;
+    font-style: italic;
+    box-sizing: border-box; /* Asegura que padding no aumente el tamaño */
+}
+
+.drop-target.hovered {
+    background-color: #e6decb;
+}
+
+/* Actividad 3 */
+.problema-signos-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.problema-signos {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background-color: #f9f6f2;
+    border-radius: 6px;
+    border: 1px solid #eee;
+    font-size: 1.2em;
+    width: 80%;
+    max-width: 400px;
+    justify-content: center;
+}
+
+.problema-signos span {
+    font-weight: bold;
+}
+
+.signo {
+    background-color: #a46d00;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+.signo:hover {
+    background-color: #8a5a00;
+}
+
+.signo.selected {
+    background-color: #d19a4a;
+}
+
+/* Botones Reiniciar */
+.reiniciar {
+    background-color: #d9534f; /* Rojo para reiniciar */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.reiniciar:hover {
+    background-color: #c9302c;
+}
+
+/* Feedback messages */
+.feedback-messages {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.feedback-messages > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.feedback-messages img {
+    width: 60px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.feedback-messages p {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.correcto p {
+    color: #4CAF50; /* Verde */
+}
+
+.incorrecto p {
+    color: #f44336; /* Rojo */
+}
+
+
+/* Navegación */
+nav {
+    margin-top: 40px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav button {
+    background-color: #5cb85c; /* Verde para los botones de navegación */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+nav button:hover {
+    background-color: #4cae4c;
+}
